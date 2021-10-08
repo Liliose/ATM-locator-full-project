@@ -1,0 +1,20 @@
+RewriteEngine On 
+
+RewriteCond %{REQUEST_FILENAME}% !-d
+RewriteCond %{REQUEST_FILENAME}% !-f
+
+RewriteRule ^/?$ project/index.php [NC,L]
+RewriteRule ^home?$ project/index.php [NC,L]
+RewriteRule ^login?$ project/login.php [NC,L]
+RewriteRule ^signup?$ project/signup.php [NC,L]
+RewriteRule ^server?$ project/server.php [NC,L]
+RewriteRule ^profile?$ project/profile.php [NC,L]
+RewriteRule ^logout?$ project/logout.php [NC,L]
+RewriteRule ^admin?$ project/admin.php [NC,L]
+RewriteRule ^admin/users?$ project/users.php [NC,L]
+RewriteRule ^admin/problems?$ project/problems.php [NC,L]
+RewriteRule ^admin/problems/([0-9]+)?$ project/problem_description.php?atm=$1 [NC,L]
+RewriteRule ^admin/report/([a-z]+)?$ project/report.php?type=$1 [NC,L]
+RewriteRule ^admin/atms?$ project/atms.php [NC,L]
+RewriteRule ^admin/atms/register?$ project/register.php [NC,L]
+RewriteRule ^admin/banks?$ project/banks.php [NC,L]
